@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Finder</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-container">
+        <h1 class="header-logo">Movie Finder</h1>
+        <form class="found-movie">
+          <input
+            class="input-found-movie"
+            type="text"
+            name="movieName"
+            placeholder="Enter movie name"
+          />
+          <input
+            class="input-found-year"
+            type="text"
+            name="movieYear"
+            placeholder="Enter movie year"
+          />
+          <button class="btn-found-movie" type="submit">Search</button>
+        </form>
+        <div>
+          <button class="btn-popular-movie">Popular</button>
+          <button class="btn-favorites-movie">Favorites</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="movies">
+        <div class="container">
+          <h2 class="movies-popular-title">Popular Movies</h2>
+          <ul id="movies-list" class="movies-list"></ul>
+          <button id="load-more" class="btn-load-more hidden">Load More</button>
+        </div>
+      </section>
+
+      <section id="favorites-section" class="favorites">
+        <div class="container">
+          <h2 class="favorites-title">My Favorites</h2>
+          <ul id="favorites-list" class="favorites-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <div id="movie-modal" class="modal hidden">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./js/1-gallery.js"></script>
+  </body>
+</html>
