@@ -1,0 +1,178 @@
+/* ===========================
+   MOBILE FIRST — DEFAULT
+=========================== */
+
+/* Header */
+header {
+  background: #121212;
+}
+.header-container {
+  display: flex;
+  flex-direction: column;
+  /* мобільна версія — вертикально */
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 12px;
+}
+
+.header-logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.4;
+  color: #e50914;
+}
+
+/* Контейнер форми */
+.found-movie {
+  display: flex;
+  flex-direction: column;
+  /* мобілка — в колонку */
+  gap: 8px;
+  margin: auto 0;
+  align-items: center;
+}
+
+/* Поля введення */
+.input-found-movie,
+.input-found-year {
+  border-radius: 4px;
+  width: 220px;
+  height: 34px;
+  background-color: #1f1f1f;
+  padding: 9.6px 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #e0e0e0;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-found-movie:focus,
+.input-found-year:focus {
+  border-color: #e50914;
+  box-shadow: 0 0 5px #e50914;
+}
+
+/* Кнопки */
+.btn-found-movie,
+.btn-favorites-movie,
+.btn-popular-movie {
+  border-radius: 4px;
+  width: 74px;
+  height: 34px;
+  padding: 8px 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-favorites-movie {
+  width: 93px;
+  height: 34px;
+  margin-left: 0;
+  /* мобілка — без відступу */
+}
+
+.btn-found-movie:hover,
+.btn-favorites-movie:hover,
+.btn-popular-movie:hover {
+  background-color: #f40612;
+  transform: scale(1.05);
+}
+
+.btn-found-movie:active,
+.btn-favorites-movie:active,
+.btn-popular-movie:active {
+  transform: scale(0.98);
+  background-color: #d40612;
+}
+
+
+
+/* ===========================
+        TABLET VERSION
+  min-width: 768px
+=========================== */
+
+/* TABLET */
+@media (min-width: 768px) {
+  header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Форма */
+  .found-movie {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .input-found-movie,
+  .input-found-year {
+    width: 150px;
+    /* трошки менше ніж на mobile */
+  }
+
+  /* Кнопки справа */
+  .header-container>div {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  /* Кнопки */
+  .btn-popular-movie,
+  .btn-favorites-movie {
+    width: auto;
+    padding: 8px 14px;
+    /* трішки менше, щоб влазили */
+    white-space: nowrap;
+  }
+
+  .btn-favorites-movie {
+    margin-left: 0;
+    /* Забираємо margin, бо тепер gap керує відступами */
+  }
+}
+
+
+
+/* ===========================
+        DESKTOP VERSION
+  min-width: 1280px
+=========================== */
+
+@media (min-width: 1280px) {
+  .header-logo {
+    font-size: 32px;
+  }
+
+  .input-found-movie,
+  .input-found-year {
+    width: 260px;
+  }
+
+  .btn-found-movie,
+  .btn-favorites-movie,
+  .btn-popular-movie {
+    width: 90px;
+  }
+
+  .btn-favorites-movie {
+    width: 110px;
+  }
+}

@@ -1,4 +1,5 @@
 body {
+
   font-family: Arial, sans-serif;
   background: #121212;
   color: #fff;
@@ -9,88 +10,6 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Header */
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header-logo {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-
-  /* line-height: 40px; */
-  line-height: 1.4;
-  color: #e50914;
-}
-/* Контейнер форми */
-.found-movie {
-  display: flex;
-  gap: 8px;
-  margin: auto 0;
-  align-items: center;
-}
-
-/* Поля введення */
-.input-found-movie,
-.input-found-year {
-  border-radius: 4px;
-  width: 220px;
-  height: 34px;
-  background-color: #1f1f1f;
-  padding: 9.6px 16px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  color: #e0e0e0;
-  border: 1px solid #ccc;
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.input-found-movie:focus,
-.input-found-year:focus {
-  border-color: #e50914;
-  box-shadow: 0 0 5px #e50914;
-}
-
-/* Кнопка пошуку */
-.btn-found-movie,
-.btn-favorites-movie,
-.btn-popular-movie {
-  border-radius: 4px;
-  width: 74px;
-  height: 34px;
-  padding: 8px 16px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  color: #fff;
-  background-color: #e50914;
-  color: #fff;
-  border: none;
-  transition: background-color 0.2s, transform 0.1s;
-}
-.btn-favorites-movie {
-  width: 93px;
-  height: 34px;
-  margin-left: 16px;
-}
-
-.btn-found-movie:hover,
-.btn-favorites-movie:hover,
-.btn-popular-movie:hover {
-  background-color: #f40612;
-  transform: scale(1.05);
-}
-
-.btn-found-movie:active,
-.btn-favorites-movie:active,
-.btn-popular-movie:active {
-  transform: scale(0.98);
-  background-color: #d40612;
-}
 
 .movies-popular-title,
 .favorites-title {
@@ -99,7 +18,7 @@ h2 {
   font-size: 28px;
   text-align: center;
   color: #ffffff;
-  margin: 24px 0 12px 0;
+  margin: 12px 0 12px 0;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
